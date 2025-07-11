@@ -7,6 +7,8 @@
 </head>
 <body>
   <h1><a href="web.html">WEB</a></h1>
+
+<!--  다크/나이트모드 버튼-->
   <input id="night_day" type="button" value="night" onclick="
      if(document.querySelector('#night_day').value==='night'){
        document.querySelector('body').style.backgroundColor='black';
@@ -27,5 +29,15 @@
        JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS.
        Ninety-nine percent of websites use JavaScript on the client side for webpage behavior.
       </p>
+    <input type="button" value="night" onclick="
+       var target = document.querySelector('body');
+       if(this.value==='night'){
+         target.style.backgroundColor='black';
+         target.style.color='white';
+         this.value='day';}
+       else{
+         target.style.backgroundColor='white';
+         target.style.color='black';
+         this.value='night';} ">
 </body>
 </html>
