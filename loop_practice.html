@@ -6,16 +6,30 @@
   <body>
     <h1>Loop</h1>
     <ul>
+      <script>
+        document.write('<li>1</li>');
+        var i = 0;
+        while(i < 3) {
+          document.write('<li>2</li>');
+          document.write('<li>3</li>');
+          i = i + 1;
+        }
+        document.write('<li>4</li>');
+      </script>
+    </ul>
+    <h1>Loop&Array</h1>
     <script>
-      document.write('<li>1</li>');
-      var i = 0;
-      while(i<3) {
-        document.write('<li>2</li>');
-        document.write('<li>3</li>');
-        i = i + 1;
-      }
-        document.write(<li>4</li>);
+      var coworkers = ['jaemin','jeno','mark','haechan']
     </script>
+    <h2>Co workers</h2>
+    <ul>
+      <script>
+        var i =0;
+        while(i<coworkers.length){
+          document.write('<li>'+coworkers[i]+'</li>');
+          i = i +1;
+        }
+      </script>
     </ul>
   </body>
 </html>
