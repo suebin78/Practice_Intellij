@@ -5,31 +5,36 @@
   <title>WEB1-JAVASCRIPT</title>
   <meta charset="utf-8">
   <script>
-    function nightDayHandle(self){
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = color;
+        i = i + 1;
+      }
+    }
+    function BodySetColor(color){
+      document.querySelector('body').style.color=color;
+    }
+    function BodySetBackgroundColor(color){
+      document.querySelector('body').style.backgroundColor=color;
+    }
+    function nightDayHandler(self){
       var target = document.querySelector('body');
       if(self.value==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
+        BodySetBackgroundColor('black');
+        BodySetColor('white');
         self.value='day';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'powderblue';
-          i = i + 1;
-        }
+        LinksSetColor('powderblue');
 
       }
       else{
-        target.style.backgroundColor='white';
-        target.style.color='black';
+        BodySetBackgroundColor('white');
+        BodySetColor('black');
         self.value='night';
 
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-          alist[i].style.color = 'blue';
-          i = i + 1;}}}
+        LinksSetColor('blue')}}
   </script>
 </head>
 <body>
@@ -37,7 +42,7 @@
 
 <!--  다크/나이트모드 버튼-->
   <input id="night_day" type="button" value="night" onclick="
-    nightDayHandle(this);
+    nightDayHandler(this);
 ">
    <ol>
      <li><a href="html.html">HTML</a></li>
